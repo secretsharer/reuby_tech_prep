@@ -1,4 +1,7 @@
-def to_histogram
+require 'prime'
+module Enumerable
+   
+   def to_histogram
    inject(Hash.new(0)) { |h, x| h[x] += 1; h}
  end
 end
@@ -18,9 +21,6 @@ def make_anagrams(a, b)
 end
 
 *****************************************
-
-require 'prime'
-
 
 def prime_finder(string)
    
